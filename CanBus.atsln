@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "CanBusATMega8", "CanBus\CanBusATMega8.cproj", "{4E90078E-9F83-4B6B-A513-717668AD7EDC}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "CanBusATMega32", "CanBusATMega32\CanBusATMega32.cproj", "{669BD485-A0A1-4AE3-A8B1-3A567A6558DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E90078E-9F83-4B6B-A513-717668AD7EDC}.Debug|AVR.ActiveCfg = Debug|AVR
+		{4E90078E-9F83-4B6B-A513-717668AD7EDC}.Debug|AVR.Build.0 = Debug|AVR
+		{4E90078E-9F83-4B6B-A513-717668AD7EDC}.Release|AVR.ActiveCfg = Release|AVR
+		{4E90078E-9F83-4B6B-A513-717668AD7EDC}.Release|AVR.Build.0 = Release|AVR
+		{669BD485-A0A1-4AE3-A8B1-3A567A6558DA}.Debug|AVR.ActiveCfg = Debug|AVR
+		{669BD485-A0A1-4AE3-A8B1-3A567A6558DA}.Debug|AVR.Build.0 = Debug|AVR
+		{669BD485-A0A1-4AE3-A8B1-3A567A6558DA}.Release|AVR.ActiveCfg = Release|AVR
+		{669BD485-A0A1-4AE3-A8B1-3A567A6558DA}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
