@@ -9,6 +9,11 @@
 #ifndef CAN_LIB_H_
 #define CAN_LIB_H_
 
+#include <stdint.h>
+#include <avr/io.h>
+#include <util/delay.h>
+
+
 typedef struct {
 	uint8_t OutputBuffer;
 	uint8_t Priority;
@@ -68,6 +73,10 @@ typedef struct {
 
 //Flags
 #define ENABLE_REMOTE_TRANSMISION 0x40
+#define RXBUF0 0
+#define RXBUF1 1
+
+
 void SPI_SetSS();
 void SPI_ResetSS();
 void SPI_Init();
@@ -84,6 +93,7 @@ void CAN_SetBuffer(uint8_t bufferAdr, uint8_t value);
 void CAN_SendCmd(uint8_t cmd);
 void CAN_TransmitMessage(StandartMessage* stdMessage);
 void CAN_ReceiveMessage(uint8_t InputBuffer, StandartMessage* stdMessage);
+int8_t CAN_CheckInbox();
 
 
 

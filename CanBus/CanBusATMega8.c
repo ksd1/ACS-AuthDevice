@@ -8,10 +8,11 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
-#include "CAN_Lib.h"
-#include "mifare.h"
 
-#define DEVICE_ID 0x02
+#include "mifare.h"
+#include "ACS_Protocol.h"
+
+
 
 
 
@@ -25,16 +26,16 @@ void blink()
 int main(void)
 {
 	
-	StandartMessage TxMessage;
-	StandartMessage RxMessage;
+	//StandartMessage TxMessage;
+	//StandartMessage RxMessage;
 	
-	TxMessage.OutputBuffer = 0;
-	TxMessage.Priority = 0;
-	TxMessage.StdIdentifier = DEVICE_ID;
-	TxMessage.MessageLength = 2;
-	TxMessage.RemoteTransmission = 0;
-	TxMessage.Messages[0] = 0xF0;
-	TxMessage.Messages[1] = 0x0F;
+	//TxMessage.OutputBuffer = 0;
+	//TxMessage.Priority = 0;
+	//TxMessage.StdIdentifier = DEVICE_ID;
+	//TxMessage.MessageLength = 2;
+	//TxMessage.RemoteTransmission = 0;
+	//TxMessage.Messages[0] = 0xF0;
+	//TxMessage.Messages[1] = 0x0F;
 	
 	
 	
@@ -74,7 +75,7 @@ int main(void)
 	uint8_t blockAddr;
 	char mynum[8];
 	
-	
+	ACS_ConnectToSystem();
 	
     while(1)
     {
@@ -99,7 +100,7 @@ int main(void)
 		}
 		*/
 		
-		
+		/*
         if(CAN_GetBuffer(CANINTF_ADR)&(RX0IF|RX1IF))
         {
 	        CAN_ReceiveMessage(0,&RxMessage);
@@ -132,6 +133,7 @@ int main(void)
 			blink();
 			PORTD = ~(CAN_GetBuffer(0x1D));
 			_delay_ms(2000);
-		}			
+		}		
+		*/	
     }
 }

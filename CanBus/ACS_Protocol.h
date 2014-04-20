@@ -6,8 +6,18 @@
  */ 
 
 
+
 #ifndef ACS_PROTOCOL_H_
 #define ACS_PROTOCOL_H_
+
+#include "CAN_Lib.h"
+#include <stdint.h>
+#include <util/delay.h>
+
+#define TIMEOUT 1000
+//Device ID
+#define MASTER_ID 0x01
+#define DEVICE_ID 0x02
 
 //ACS Request
 
@@ -23,5 +33,10 @@
 #define LIGHT 0xD1
 #define LOCK 0xD2
 
+
+uint8_t ACS_ConnectToSystem();
+
+
+uint8_t ACS_NoConnectionACK_ErrorHandler();
 
 #endif /* ACS_PROTOCOL_H_ */

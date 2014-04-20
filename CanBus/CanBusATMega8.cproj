@@ -130,6 +130,9 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ACS_Protocol.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="ACS_Protocol.h">
       <SubType>compile</SubType>
     </Compile>

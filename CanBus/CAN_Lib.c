@@ -5,11 +5,7 @@
  *  Author: Krzysiu
  */ 
 
-
-#include <avr/io.h>
 #include "CAN_Lib.h"
-#include <util/delay.h>
-
 
 inline void SPI_SetSS()
 {
@@ -252,4 +248,16 @@ void CAN_InitRXBuffer()
 	SPI_SetSS();
 	
 	
+}
+
+int8_t CAN_CheckInbox()
+{
+	char InboxState = CAN_GetBuffer(CANINTF_ADR);
+	
+	if(InboxState&RX0IF)
+	return RXBUF0;
+	if(InboxState&RX1IF)
+	return RXBUF1;
+	
+	return -1;
 }
